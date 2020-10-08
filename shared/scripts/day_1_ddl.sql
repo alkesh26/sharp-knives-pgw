@@ -218,3 +218,21 @@ BEGIN;
 ALTER TYPE APPOINTMENT_TYPE ADD VALUE 'in_person';
 
 COMMIT;
+
+
+CREATE TABLE books (
+    id         SERIAL,
+    name       VARCHAR,
+    created_at TIMESTAMP DEFAULT current_timestamp
+);
+
+CREATE TABLE editions (
+    id         SERIAL,
+    name       VARCHAR,
+    book_id    INTEGER,
+    created_at TIMESTAMP DEFAULT current_timestamp
+);
+
+ALTER TABLE editions
+    ADD CONSTRAINT edition_belongs_to_book FOREIGN KEY (book_id) REFERENCES books(id);
+
