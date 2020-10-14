@@ -21,7 +21,7 @@ The host OS for Vagrant will be your regular Dev OS, and you will be able to edi
 5. A working CLI to interact with PostgreSQL instance
 6. A working GUI to interact with PostgreSQL instance
 
-For 1, 2, 3, and 4 we will use Ubuntu 16 LTS through Vagrant. For 5, we will use `psql` on the host box. For 6, we will use [DataGrip][datagrip]. If you want, you can use a tool that you are already familiar with. Here are some great options:
+For 1, 2, 3, and 4 we will use Ubuntu 16 LTS through Vagrant. For 5, we will use `psql` on the `guest` box. For 6, we will use [DataGrip][datagrip]. If you want, you can use a tool that you are already familiar with. Here are some great options:
  
 - [Postico][postico] 
 - [DBeaver][dbeaver]
