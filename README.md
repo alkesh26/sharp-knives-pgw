@@ -36,8 +36,6 @@ For 1, 2, 3, and 4 we will use Ubuntu 16 LTS through Vagrant. For 5, we will use
 
 ### Procedure
 
-Here's the setup procedure:
-
 1. Checkout the latest copy of the cloned repo. This is important.
 1. Install the latest [Vagrant][vagrant]. The version is 2.2.x as of writing this.
 1. Install the latest [DataGrip][datagrip]. The version is 2018.3.x as of writing this.
@@ -92,9 +90,15 @@ Here's the setup procedure:
 ### Final Checklist
 
 1. You are able to bring up the `guest` box: `vagrant up`
-2. You are able to connect to PostgreSQL on the `guest` box through `psql` on the `guest` box.
-3. You are able to connect to PostgreSQL on the `guest` box through `DataGrip` on the `host` box.
+2. You are able to connect to PostgreSQL on the `guest` box through `psql` on the `guest` box. Run this query and confirm that you get `91` as the answer:
 
+
+    select count(*) from authors_books;
+
+3. You are able to connect to PostgreSQL on the `guest` box through `DataGrip` on the `host` box. Run this query from DataGrip and confirm that you get `1567` as the answer:
+
+
+    select count(*) from editions_shelves;
 
 
 [postico]: https://eggerapps.at/postico/
