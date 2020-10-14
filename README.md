@@ -14,14 +14,18 @@ The host OS for Vagrant will be your regular Dev OS, and you will be able to edi
 
 **Desired end state:**
 
-1. A server with PostgreSQL 9.5 installed
+1. A server with PostgreSQL >=9.5 installed
 2. SSH access to this server
 3. Ability to copy and edit files on this server
 4. Ability to run scripts on this server
 5. A working CLI to interact with PostgreSQL instance
 6. A working GUI to interact with PostgreSQL instance
 
-For 1, 2, 3, and 4 we will use Ubuntu 16 LTS through Vagrant. For 5, we will `pgcli` on the host box. For 6, we will use DataGrip. If you want, you can use a tool that you are already familiar with. For example, I am on a MacOS and I use [Postico][postico]. Amongst Linux users, [DBeaver][dbeaver] is widely popular.
+For 1, 2, 3, and 4 we will use Ubuntu 16 LTS through Vagrant. For 5, we will use `psql` on the host box. For 6, we will use [DataGrip][datagrip]. If you want, you can use a tool that you are already familiar with. Here are some great options:
+ 
+- [Postico][postico] 
+- [DBeaver][dbeaver]
+- [Arctype][arctype]
 
 
 **Terminology**
@@ -37,7 +41,6 @@ Here's the setup procedure:
 1. Checkout the latest copy of the cloned repo. This is important.
 1. Install the latest [Vagrant][vagrant]. The version is 2.2.x as of writing this.
 1. Install the latest [DataGrip][datagrip]. The version is 2018.3.x as of writing this.
-1. Install the latest [pgcli][pgcli] on `host` box. The version is 2.1.x as of writing this. In effect, pgcli is installed 2 times. Once on `host` box by you, and once on `guest` box, by vagrant during provisioning.
 1. Fork this repo under a private repository.  Fork is important, because you will want to push your own changes, and private is important because this material is only available to workshop attendees. GitHub now supports private forks. Gitlab has always had private forks. Make your choice, and get started!
 1. Ensure vagrant works on your dev box by running `vagrant list-commands`. You should get an output like:
 
@@ -85,15 +88,11 @@ Here's the setup procedure:
 1. From your _host_ box, try to configure a connection to the PostgreSQL on the `guest` box. In DataGrip, create a new project (if you have the code checked out, you can select it when the prompt appears). Here are my connection setup windows:
     <img width="762" alt="screenshot 2019-02-25 at 3 38 21 pm" src="https://user-images.githubusercontent.com/90904/53334254-3c00d380-391e-11e9-8954-a23392e84e9e.png">
     <img width="912" alt="screenshot 2019-02-25 at 3 37 35 pm" src="https://user-images.githubusercontent.com/90904/53334256-3c00d380-391e-11e9-800b-0cbefe1fe377.png">
-1. One final thing to check: [Editor integration with `pgcli`][pgcli-editor]. Make sure `\e` works from your `pgcli` prompt, and by works I mean:
-    1. It opens your preferred editor
-    2. It populates the query on the command line after editing is done:
-
 
 ### Final Checklist
 
 1. You are able to bring up the `guest` box: `vagrant up`
-2. You are able to connect to PostgreSQL on the `guest` box through `pgcli` on the `host` box.
+2. You are able to connect to PostgreSQL on the `guest` box through `psql` on the `guest` box.
 3. You are able to connect to PostgreSQL on the `guest` box through `DataGrip` on the `host` box.
 
 
@@ -102,6 +101,5 @@ Here's the setup procedure:
 [dbeaver]: https://dbeaver.io/
 [vagrant]: https://www.vagrantup.com/
 [datagrip]: https://www.jetbrains.com/datagrip/
-[pgcli]: https://www.pgcli.com/
-[pgcli-editor]: https://www.pgcli.com/editor
+[arctype]: https://arctype.com/
 
