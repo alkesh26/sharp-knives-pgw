@@ -37,7 +37,7 @@ For 1, 2, 3, and 4 we will use Ubuntu 16 LTS through Vagrant. For 5, we will use
 ### Procedure
 
 1. Checkout the latest copy of the cloned repo. This is important.
-1. Install the latest [Vagrant][vagrant]. The version is 2.2.x as of writing this.
+1. Install the latest [Vagrant][vagrant]. The version is 2.2.x as of writing this. You will very likely need VirtualBox or VMWare to go along with Vagrant. See their installation guide for more details.
 1. Install the latest [DataGrip][datagrip]. The version is 2018.3.x as of writing this.
 1. Fork this repo under a private repository.  Fork is important, because you will want to push your own changes, and private is important because this material is only available to workshop attendees. GitHub now supports private forks. Gitlab has always had private forks. Make your choice, and get started!
 1. Ensure vagrant works on your dev box by running `vagrant list-commands`. You should get an output like:
