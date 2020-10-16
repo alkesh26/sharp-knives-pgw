@@ -93,12 +93,12 @@ For 1, 2, 3, and 4 we will use Ubuntu 16 LTS through Vagrant. For 5, we will use
 2. You are able to connect to PostgreSQL on the `guest` box through `psql` on the `guest` box. Run this query and confirm that you get `91` as the answer:
 
 
-    select count(*) from authors_books;
+       select count(*) from authors_books;
 
 3. You are able to connect to PostgreSQL on the `guest` box through `DataGrip` on the `host` box. Run this query from DataGrip and confirm that you get `1567` as the answer:
 
 
-    select count(*) from editions_shelves;
+        select count(*) from editions_shelves;
 
 
 [postico]: https://eggerapps.at/postico/
